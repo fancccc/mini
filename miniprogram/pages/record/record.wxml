@@ -1,0 +1,15 @@
+
+<text></text>
+<button class="minus" size="mini" type="primary" bindtap="begintimeDATA">开始</button>\n
+<button class="minus" size="mini" type="primary" bindtap="endtimeDATA">结束</button>
+<button class="minus" size="mini" type="primary" bindtap="getDATA">今日记录</button>
+
+<view wx:if="~{{end}}" class="result">每日学习时长
+  <view class="resultNum" wx:for="{{array}}">
+    <view wx:if="{{item.today===today}}">
+      <text wx:if="{{item.type===begin}}" class="textc">{{item.begintime}}\t<text class="texta">{{item.type}}</text>\n</text>
+      <text wx:if="{{item.type===end}}" class="textc">{{item.endtime}}\t<text class="texta">{{item.type}}</text>\n</text>
+    </view>
+  </view>
+  <text class="textb">学习时长：<text class="textc">{{minute}}min\t{{minute/60}}</text></text>
+</view>

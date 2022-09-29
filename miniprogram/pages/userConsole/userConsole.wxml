@@ -1,0 +1,32 @@
+<!--pages/userConsole/userConsole.wxml-->
+<view class="container">
+
+  <view class="list">
+    <view class="list-item" bindtap="testCgi">
+      <text class="request-text">用户 openid 获取成功</text>
+    </view>
+    <view class="list-item" bindtap="testCgi">
+      <text class="request-text">{{openid}}</text>
+    </view>
+  </view>
+
+  <!-- 云开发用户管理指引 -->
+  <view class="guide">
+    <text class="headline">授权获取方式</text>
+    <image mode="aspectFit" src="../../images/s1.jpg"></image>
+    <image mode="aspectFit" src="../../images/s2.jpg"></image>
+    <text class="p">成功获得授权首页出现头像</text>
+    <text class="p">\n</text>
+    <view wx:if="{{hz}}">
+    <text class="headline">互助Tip</text>
+    <text class="p">1. 点击首页点我助力</text>
+    <text class="p">2. 选择类型点击开始助力</text>
+    <text class="p">3. 复制弹出口令互助（需完成三次方可进行下一步）</text>
+    <image mode="aspectFit" src="../../images/setp3.png"></image>
+    <text class="p">4. 完成上一步出现提交自己口令按钮点击进入页面提交</text>
+    <image mode="aspectFit" src="../../images/setp4.jpg"></image>
+    <text class="p">5. 完成提交</text>
+    </view>
+  </view>
+
+</view>

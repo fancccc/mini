@@ -1,0 +1,20 @@
+<!--miniprogram/pages/photos/photos.wxml-->
+  <view class="canvasWrap" style="width: 320px;height: 410px;">
+    <view class="canvasWrap">
+      <image wx:if="{{!cover}}" class="tocenter" style="width: 400rpx;height: 400rpx;" mode="aspectFit" src="../../images/add.png" bindtap="onUpLoad"></image>
+    <navigator url="../canvas/canvas" open-type="navigate" >
+     <image wx:if="{{cover}}" class="canvasWrap" bindload="detection" style="width: 320px;height: 410px;" mode="aspectFit" src="{{cover}}">
+     </image>
+    </navigator>
+    </view>
+  </view>
+  <text>\n\n</text>
+  <view class="title">
+    <button class="bt_1" bindtap="onUpLoad" type='primary' size="mini">上传图片</button>
+    <button class="bt_2" bindtap="delete" type='primary' size="mini"style="margin-left:20px;">清空内容</button>
+  </view>
+  <text wx:if="{{array.length > 0}}" class="tip-c">检测完毕，请点击图片获取检测报告</text>
+  <text wx:if="{{nickName ===''}}"class="tip">TP:未获得授权！\n您的微信头像昵称等信息将不能在结果中呈现！\n请先获取授权信息！\n未授权也可进行下一步~</text>
+  <view class="under-end" style="position:fixed; bottom:0;width: 750rpx;">
+    <text>照片选择后无反应请刷新页面重新进入~</text>
+  </view>

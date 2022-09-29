@@ -1,0 +1,16 @@
+<!--miniprogram/pages/clock/clock.wxml-->
+
+<view wx:if="~{{end}}" class="result">考研倒计时
+  <view class="resultNum">
+    <text class="texta">距<text class="textb">2022-12-24 00:00:00</text>仅剩</text>
+    <text class="textc">\n\n\t{{d}}</text>天
+    <text class="textc">\n\t{{h}}</text>时
+    <text class="textc">\n\t{{m}}</text>分
+    <text class="textc">\n\t{{s}}</text>秒
+    </view>
+</view>
+<view wx:if="{{end}}" class="result">倒计时结束
+  <view class="resultNum">
+    <text class="texta">今年必定上岸！！<text class="textd">{{nickName}}</text></text>
+    </view>
+</view>

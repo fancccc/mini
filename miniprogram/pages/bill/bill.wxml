@@ -1,0 +1,100 @@
+<!--miniprogram/pages/bill/bill.wxml-->
+<view class="weui-tab">
+	<view wx:if="{{panel1}}" id="panel1" aria-labelledby="tab1" class="weui-tab__panel" aria-role="tabpanel" style="padding-bottom:110rpx">
+      <view class="showBill">
+        <!--<view bindtap="addBill">show</view>-->
+         <view class="kind-list">
+          <view class="kind-list__item" style="background-color:rgb(222, 255, 255); border-radius: 8px;">
+            <view class="weui-flex kind-list__item-hd">
+              <view class="weui-flex__item">总计</view>
+               <view class="kind-list__bill">{{allBill}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+        <view class="page__bd page__bd_spacing">
+        <view wx:for="{{result}}" class="kind-list" style="padding: 20rpx;">
+          <view class="list-time">{{time[index]}}</view>
+          <view class="kind-list__item" style="background-color:{{color[type_index[index]]}}; border-radius: 8px;">
+            <view class="weui-flex kind-list__item-hd">
+              <view class="weui-flex__item">{{item.type}}<text style="font-size:20rpx">\n{{item.describe}}</text></view>
+              <view class="kind-list__bill">{{item.bill}}</view>
+            </view>
+          </view>
+        </view>
+        <!--
+        <view class="kind-list" style="padding: 20rpx;">
+        <view class="list-time">时间</view>
+          <view class="kind-list__item">
+            <view class="weui-flex kind-list__item-hd">
+              <view class="weui-flex__item">表单<text style="font-size:30rpx">\n备注</text></view>
+              <view class="kind-list__bill">2020.15</view>
+            </view>
+          </view>
+        </view>
+        -->
+      </view>
+  </view>
+	<view wx:if="{{panel2}}" id="panel2" aria-labelledby="tab2" class="weui-tab__panel" aria-role="tabpanel">
+      PASS
+  </view>
+	<view wx:if="{{panel3}}" id="panel3" aria-labelledby="tab3" class="weui-tab__panel" aria-role="tabpanel">
+        <view class="addPage">
+        <view class="kind-list" style="padding: 20rpx;padding-bottom: -100rpx">
+        <view class="list-time">{{nowtime}}</view>
+          <view class="kind-list__item" style="background-color: {{nowcolor}};border-radius: 8px;">
+            <view class="weui-flex kind-list__item-hd" style="color:white">
+              <view class="weui-flex__item">{{t}}<text style="font-size:20rpx;">\n{{describe}}</text></view>
+              <view wx:if="{{input_num == 0}}" class="kind-list__bill">{{input_num}}</view>
+              <view wx:if="{{input_num != 0}}" class="kind-list__bill">{{input_str}}={{input_num}}</view>            
+            </view>
+          </view>
+        </view>
+          <view class="type-box">
+          <view style="padding-top:18rpx" wx:for="{{type}}">
+            <view bindtap="getType" class="type" style="background-color: {{cs[index] ? color[index]:''}}" data-type="{{index}}">
+              <image class="type-img" src="../../images/b{{icos[index]}}.png"></image>
+              <view class="type-text">{{item}}</view>
+            </view>
+          </view>
+          </view>
+          <view class="countBox">
+            <input class="weui-input" type="text" placeholder="点击输入备注"
+            bindinput='getDescribe'/>
+            <view class="count">
+              <view wx:for="{{count}}" class='smallbox' data-value="{{item}}" bindtap="getCount">{{item}}</view>
+            </view>
+          </view>
+        </view>
+  </view>
+      
+	<view wx:if="{{panel4}}" id="panel4" aria-labelledby="tab4" class="weui-tab__panel" aria-role="tabpanel">Amet dignissimos doloribus voluptate maxime dolorem quia Deleniti eligendi similique nisi corrupti eius aut Unde nesciunt quos quos sapiente dolorem? Odit soluta repudiandae accusantium ducimus totam accusamus. Rem ad numquam
+  </view>
+
+  <view class="weui-tab">
+      <view aria-label="选项卡标题" class="weui-tabbar" aria-role="tablist">
+        <view bindtap="tab1" id="tab1" aria-labelledby="t1_title" aria-describedby="t1_tips" aria-selected="{{panel1}}" aria-controls="panel1" class="{{panel1? 'weui-tabbar__item weui-bar__item_on':'weui-tabbar__item'}}" aria-role="tab">
+          <view id="t1_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+            <image src="../../images/b236.png" alt class="weui-tabbar__icon"></image>
+          </view>
+          <view id="t1_title" aria-hidden="true" class="weui-tabbar__label">详情</view>
+        </view>
+        <view bindtap="tab2" id="tab2" aria-labelledby="t2_title" aria-describedby="t2_tips" aria-selected="{{panel2}}" aria-controls="panel2" class="{{panel2? 'weui-tabbar__item weui-bar__item_on':'weui-tabbar__item'}}" aria-role="tab">
+          <image src="../../images/b248.png" alt class="weui-tabbar__icon"></image>
+          <view aria-hidden="true" id="t2_title" class="weui-tabbar__label">统计</view>
+        </view>
+        <view bindtap="tab3" id="tab3" aria-labelledby="t3_title" aria-describedby="t3_tips" aria-selected="{{panel3}}" aria-controls="panel3" class="{{panel3? 'weui-tabbar__item weui-bar__item_on':'weui-tabbar__item'}}" aria-role="tab">
+          <view bindtap="onGetOpenid" id="t3_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+            <image src="../../images/b99.png" alt class="weui-tabbar__icon"></image>
+          </view>
+          <view id="t3_title" aria-hidden="true" class="weui-tabbar__label">记账</view>
+        </view>
+      </view>
+    </view>
+		</view>
+
+<view wx:if="{{false}}" class="right-view">
+  <view class="vi" bindtap="toAdd"><image class="bnt-img" src="../../images/more.png"></image></view>
+</view>
+
+

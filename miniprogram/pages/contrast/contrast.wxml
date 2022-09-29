@@ -1,0 +1,11 @@
+<!--miniprogram/pages/contrast/contrast.wxml-->
+<text class="title"></text>
+<view class="AllIMG">
+  <image wx:if="{{pic1}}" class="leftIMG" mode="aspectFill" src="{{pic1}}" bindtap="choosePIC1">
+  </image>
+  <image class="rightIMG" mode="aspectFill" src="{{pic2}}" bindtap="choosePIC2"></image>
+</view>
+<text class="tip">点击图片选图/换图</text>
+<view class="result">{{sim}}<view class="resultNum">{{num1}}{{per}}</view></view>
+<text class="complete">{{Complete}}</text>
+<button class="bt_1" type='primary' bindtap="contrast">开始检测</button>

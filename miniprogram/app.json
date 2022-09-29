@@ -1,0 +1,38 @@
+{
+  "useExtendedLib": {
+    "weui": true
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/Form/Form",
+    "pages/showImg/showImg",
+    "pages/photos/photos",
+    "pages/canvas/canvas",
+    "pages/contrast/contrast",
+    "pages/userImgs/userImgs",
+    "pages/Video/Video",
+    "pages/clock/clock",
+    "pages/draw/draw",
+    "pages/record/record",
+    "pages/432/432",
+    "pages/bill/bill"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "这儿全都有",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

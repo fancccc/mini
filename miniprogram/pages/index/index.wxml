@@ -1,0 +1,142 @@
+<!--index.wxml-->
+<view class="page__hd">
+		<view class="page__title"></view>
+		<view class="page__desc"></view>
+</view>
+	<view class="weui-grids">
+		<navigator class="weui-grid" aria-role="button" url="../photos/photos">
+			<view class="weui-grid__icon">
+				<image class="weui-grid__icon" src="../../images/icon_tabbar.png" alt></image>
+			</view>
+			<view class="weui-grid__label">颜值测试</view>
+		</navigator>
+		<navigator class="weui-grid" aria-role="button" url="../contrast/contrast">
+			<view class="weui-grid__icon">
+				<image class="weui-grid__icon" src="../../images/icon_tabbar.png" alt></image>
+			</view>
+			<view class="weui-grid__label">人脸对比</view>
+		</navigator>
+		<navigator class="weui-grid" aria-role="button" url="../clock/clock">
+			<view class="weui-grid__icon">
+				<image class="weui-grid__icon" src="../../images/icon_tabbar.png" alt></image>
+			</view>
+			<view class="weui-grid__label">倒计时</view>
+		</navigator>
+		<navigator class="weui-grid" aria-role="button" url="../userImgs/userImgs">
+			<view class="weui-grid__icon">
+				<image class="weui-grid__icon" src="../../images/icon_tabbar.png" alt></image>
+			</view>
+			<view class="weui-grid__label">头像</view>
+		</navigator>
+		<navigator class="weui-grid" aria-role="button" url="../record/record">
+			<view class="weui-grid__icon">
+				<image class="weui-grid__icon" src="../../images/icon_tabbar.png" alt></image>
+			</view>
+			<view class="weui-grid__label">计时器</view>
+		</navigator>
+		<navigator class="weui-grid" aria-role="button" url="../bill/bill">
+			<view class="weui-grid__icon">
+				<image class="weui-grid__icon" src="../../images/icon_tabbar.png" alt></image>
+			</view>
+			<view class="weui-grid__label">账单</view>
+		</navigator>
+		<navigator class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image class="weui-grid__icon" src="../../images/icon_tabbar.png" alt></image>
+			</view>
+			<view class="weui-grid__label">Grid</view>
+		</navigator>
+		<navigator class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image class="weui-grid__icon" src="../../images/icon_tabbar.png" alt></image>
+			</view>
+			<view class="weui-grid__label">Grid</view>
+		</navigator>
+		<navigator class="weui-grid" aria-role="button" url="javascript:">
+			<view class="weui-grid__icon">
+				<image class="weui-grid__icon" src="../../images/icon_tabbar.png" alt></image>
+			</view>
+			<view class="weui-grid__label">Grid</view>
+		</navigator>
+  </view>
+  <view class="toCenterIndex">
+    <text>\n</text>
+    <text>\n\n</text>
+    <image animation="{{animationData}}" class="toCenterCol" bindtap="mainPicAnimation" style="width: 330px; height: 150px; background-color: #53600;" mode="aspectFit" show-menu-by-longpress="true" src="../../images/HN.jpg"></image>
+  </view>
+<!--
+<view class="container">
+  <view class="userinfo">
+    <button
+      bindtap="getUserProfile"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+    ></button>
+    <view class="userinfo-nickname-wrapper">
+      <button class="userinfo-nickname" bindtap="onGetOpenid">授权说明</button>
+    </view>
+  </view>
+  <text wx:if="{{!hasUserInfo}}" class="getInfo" bindtap="getUserProfile">点击头像获取授权</text>
+
+
+  <view wx:if="{{false}}" class="uploader">
+    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
+      <text>点我助力</text>
+    </navigator>
+  </view>
+
+  <view class="uploader">
+    <navigator url="../photos/photos" open-type="navigate" class="uploader-text">
+      <text bindtap="onGetUserInfo">测测颜值 Click Me</text>
+    </navigator>
+  </view>
+
+  <view class="uploader">
+    <navigator url="../contrast/contrast" open-type="navigate" class="uploader-text">
+      <text bindtap="onGetUserInfo">人脸对比 Click Me</text>
+    </navigator>
+  </view>
+
+  <view class="uploader">
+    <navigator url="../clock/clock" open-type="navigate" class="uploader-text">
+      <text bindtap="">考研倒计时</text>
+    </navigator>
+  </view>
+
+  <view class="uploader">
+    <navigator url="../userImgs/userImgs" open-type="navigate" class="uploader-text">
+      <text bindtap="">历史头像</text>
+    </navigator>
+  </view>
+
+  <view class="uploader">
+    <navigator url="../record/record" open-type="navigate" class="uploader-text">
+      <text bindtap="">计时器</text>
+    </navigator>
+  </view>
+
+  <view wx:if="{{false}}"class="uploader">
+    <navigator url="../Video/Video" open-type="navigate" class="uploader-text">
+      <text bindtap="">Video</text>
+    </navigator>
+  </view>
+
+
+  <view wx:if="{{false}}" class="uploader">
+    <navigator url="../translate/translate" open-type="navigate" class="uploader-text">
+      <text>语音合成(待完善...)</text>
+    </navigator>
+  </view>
+
+  <view class="toCenterIndex">
+    <text>\n</text>
+    <text>\n</text>
+    <image animation="{{animationData}}" class="toCenterCol" bindtap="mainPicAnimation" style="width: 330px; height: 150px; background-color: #53600;" mode="aspectFit" show-menu-by-longpress="true" src="../../images/HN.jpg"></image>
+  </view>
+  <text class="toCenterCol" color="#ADD8E6">\n</text>
+  <view wx:if="{{false}}" class="under-end" style="position:fixed; bottom:0;width: 750rpx;">
+    <text>BUG反馈\n添加开发者VX：<text class="endColor">fanc_c32</text>\n公众号<text class="endColor">乱七八糟de</text>留言！</text>
+  </view>
+</view>
+-->

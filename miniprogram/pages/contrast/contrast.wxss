@@ -1,0 +1,65 @@
+/* miniprogram/pages/contrast/contrast.wxss */
+Page{
+  background: white;
+  /*linear-gradient(108deg, #86E3CE, #CCABD8); */
+}
+.title{
+  text-align:center;
+  font-size: 35px;
+  color: aquamarine;
+  font-weight:bold;
+  margin-bottom: 20px;
+}
+.tip{
+  font-style:italic;
+  text-align:center;
+}
+.AllIMG{
+    background:  #ffffff; 
+    margin-top:10%;
+    margin-bottom:2%;
+}
+.leftIMG{
+  display:inline-block;
+  width: 350rpx;
+  height: 600rpx;
+  background: #fafafa;
+  float: left;
+  margin-left:10rpx;
+}
+.rightIMG{
+  display:inline-block;
+  width: 350rpx;
+  height: 600rpx;
+  background: #fafafa;
+  float:right;
+  margin-right: 10rpx;
+}
+.bt_1{
+  margin-top: 40rpx;
+  background: linear-gradient(#ccfbff, #ef96c5); 
+}
+
+.complete{
+  text-align:center;
+  font-size: 15px;
+}
+/* 字体封装 */
+@font-face {
+  font-family: "mystyle";
+  src: url('https://static.heytea.com/taro_trial/v1/font/WenYue-XinQingNianTi-NC-W8_1.otf');
+}
+.result{
+  text-align:center;
+  font-family: 'mystyle';
+  font-size: 40px;
+  color: #383737;
+  margin-top: 40rpx;
+}
+.resultNum{
+  font-size: 45px;
+  color: #afee85;
+}
+.bt_addPic{
+  position: absolute;
+}

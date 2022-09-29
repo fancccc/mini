@@ -1,0 +1,102 @@
+/* miniprogram/pages/photos/photos.wxss */
+.tatle{
+  display: flex;
+  justify-content: center;
+  font-size: 50rpx;
+  color: aquamarine;
+}
+
+.showinfo{
+    display: flex;
+    justify-content: center;
+    font-size: 40rpx;
+}
+.showinfocolor{
+  display: flex;
+  justify-content: center;
+  font-size: 40rpx;
+  color: rgb(252, 175, 103);
+}
+
+.toCenterIndex{
+  align-items: center;
+}
+
+.under-end{
+  font-size: 25rpx;
+  color: rgb(177, 174, 174);
+}
+
+#posterCanvas {
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.title {
+text-align: center;
+font-size: 20px;
+line-height: 50px;
+}
+.canvasWrap {
+  margin: 20px auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.download {
+    text-align: center;
+    background: #10aeff;
+    color: #fff;
+    font-size: 36rpx;
+    width:320px;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.uploader{
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.tip{
+  text-align: center;
+  font-size: 15px;
+  color:rgb(247, 146, 53)
+}
+
+.tocenter {
+  margin: 60px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.bt_4{
+  margin-top: 40rpx;
+  background: linear-gradient(rgb(252, 126, 67), rgba(255,0,0,0)); 
+  width: 80%;  
+  border-radius: 50rpx;
+  /* background: bg_red; */
+}
+
+.bt_2{
+  margin-top: 40rpx;
+  background: linear-gradient(to right, #ead6ee, #a0f1ea); 
+}
+
+
+.bt_1{
+  margin-top: 40rpx;
+  background: linear-gradient(#ccfbff, #ef96c5); 
+}
+.tip-c{
+  text-align: center;
+  font-size: 15px;
+  background:linear-gradient(to right,#e0de58, #b6db5f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<form bindsubmit="save">
+  <view class="page-section">
+    <view>你的链接</view>
+      <input class="weui-input" name="link" auto-focus placeholder="请输入..."/>
+  </view>
+
+  <view class="page-section">
+    <button formType="submit" type='primary' size="mini">点击提交</button>
+    <button formType="reset" type='primary' size="mini">重置数据表单</button>
+  </view>
+
+</form>

@@ -1,0 +1,24 @@
+<view wx:for="{{Imginfo}}" class="head">
+  <view class='up-img'>
+    <image src="{{item.fileID}}" mode="aspectFit"></image>
+    <text class="text-time">上传时间：{{item.date}}</text>
+  </view>
+  <view class='bnt-r'>
+      <button class="bt_1" size="mini" bindtap="saveImg" data-couldid="{{item.fileID}}"><text>保存</text></button>
+      <button class="bt_2" size="mini" bindtap="deleteImg" data-couldid="{{item.fileID}}" data-index="{{index}}"><text>删除</text></button>
+  </view>
+</view>
+<view animation="{{animationData}}" class="right-view" staty="">
+  <view class="vi" bindtap="uploadImg" ><image class="bnt-img" src="../../images/upload.png"></image><text>上传当前头像</text></view>
+  <view class="vi" bindtap="enquireImg"><image class="bnt-img" src="../../images/find.png"></image>查看历史头像</view>
+  <view class="vi" bindtap="moreImg"><image class="bnt-img" src="../../images/more.png"></image>查看更多头像</view>
+</view>
+
+<view class="box-view">
+  <view wx:if="{{more}}" wx:for="{{moreNum}}" class="more-view">
+    <view class="part">
+      <image class="moreImg" src="{{moreID}}{{index}}.jpg" lazy-load="true" mode="aspectFit"></image>
+      <button class="bt_1" size="mini" bindtap="saveImg" data-couldid="{{moreID + index + '.jpg'}}"><text>保存</text></button>
+    </view>
+  </view>
+</view>

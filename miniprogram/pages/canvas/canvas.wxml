@@ -1,0 +1,4 @@
+<!--miniprogram/pages/canvas/canvas.wxml-->
+<text class="tip-c"></text>
+<view class="canvasWrap"><canvas type="2d" id='posterCanvas' style="width: 320px;height: 510px;"></canvas></view>
+<button class="bt_4" bindtap="saveImg" type='primary'>保存到相册</button>

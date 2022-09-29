@@ -1,0 +1,42 @@
+<!--pages/databaseGuide/databaseGuide.wxml-->
+<view class="container">
+  <!-- 导航 -->
+  <view class="list">
+    <view class="list-item">
+      <text class="request-text">一起来助力~</text>
+    </view>
+    <view class="list-item" wx:if="{{openid}}">
+      <text class="request-text">openid：{{openid}}</text>
+    </view>
+  </view>
+
+  <view class="page-section">
+  <view class="page-section-title">请选择互助类型</view>
+  <view class="weui-cells weui-cells_after-title">
+    <radio-group bindchange="radioChange">
+      <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+        <view class="weui-cell__hd">
+          <radio value="{{item.value}}" checked="{{false}}"/><text>{{item.name}}</text>
+        </view>
+      </label>
+    </radio-group>
+  </view>
+  </view>
+
+  <!-- 查询记录 -->
+  <view class="guide">
+    <button class="minus" size="mini" type="primary" bindtap="onQuery">开始助力</button>
+    <view wx:for="{{array}}">
+      <view>为TA助攻：第{{index+1}}个</view>
+      <view bindtap="copy" data-link="{{item.link}}" style="color:#00d8a0">点我复制链接</view>
+    </view>
+  </view>
+  
+  <view>完成3次助力提交自己的哦！</view>
+  <view class="uploader" wx:if="{{count>=3}}" bindtap="toZero">
+    <navigator url="../Form/Form" open-type="navigate" class="uploader-text">
+      <text>点击提交自己链接</text>
+    </navigator>
+  </view>
+
+</view>

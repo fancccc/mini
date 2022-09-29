@@ -1,0 +1,9 @@
+<view class="container">
+
+<view class="list">
+  <view class="list-item">
+    <image class="image1" src="{{imageURL}}" mode="aspectFit"></image>
+  </view>
+</view>
+
+</view>
